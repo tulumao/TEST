@@ -1,0 +1,1601 @@
+start listing elf file - .\Bin/MyBelt.out
+
+
+------------------begin data section------------------
+
+Start   Length(Byte)  Type  Name                             Source File
+000000    0X05        Data  crt0@data                        
+0X0005    0X05        Data  _InterruptBackupData             
+0X000A    0X06        Data  _VirtualReg                      
+0X0010    0X01        Data  _VirtualRegIsr                   
+0X0011    0X02        Data  __runtime_arg                    
+0X0013    0X01        Data  _LcdScan_row@segment             F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0014    0X01        Data  _flag@segment                    F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0015    0X01        Data  _Lcd_flag1@segment               F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0016    0X01        Data  _Lcd_flag2@segment               F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0017    0X01        Data  _Button_flag@segment             F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0018    0X04        Data  _databuf@segment                 F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X001C    0X01        Data  _sdata273@segment                F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X001D    0X01        Data  _sdata274@segment                F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X001E    0X02        Data  _Function_ISR_isr_data           F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0020    0X01        Data  _Function_Get_OnesPlace_Number_data   F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0020    0X01        Data  _Function_PwmOut_data            F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0020    0X02        Data  _Function_Get_TensPlace_Number_data   F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0020    0X02        Data  _Function_DataPut_data           F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0020    0X04        Data  _Function_TableToBuf_data        F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0022    0X01        Data  _Function_ButtonScan_data        F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0022    0X02        Data  _Function_LcdScan_data           F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+0X0024    0X02        Data  _Function_RefleshBuf_data        F:\运动腰带\SN8 C Studio_workspace\SN8P2501B_my_belt_workspace - 改2新\MyBelt\Src\my_belt.c
+
+
+crt0@data SEGMENT DATA INBANK
+	H	DS	1
+	L	DS	1
+	X	DS	1
+	I	DS	1
+	T	DS	1
+
+_InterruptBackupData SEGMENT DATA INBANK
+	_bufT	DS	1
+	_bufI	DS	1
+	_bufY	DS	1
+	_bufZ	DS	1
+	_bufR	DS	1
+
+_VirtualReg SEGMENT DATA INBANK
+	W0	DS	1
+	W1	DS	1
+	W2	DS	1
+	W3	DS	1
+	W4	DS	1
+	W5	DS	1
+
+_VirtualRegIsr SEGMENT DATA INBANK
+	WG	DS	1
+
+__runtime_arg SEGMENT DATA INBANK
+	R0	DS	1
+	R1	DS	1
+
+_LcdScan_row@segment SEGMENT DATA INBANK
+	_LcdScan_row	DS	1
+
+_flag@segment SEGMENT DATA INBANK
+	_flag	DS	1
+
+_Lcd_flag1@segment SEGMENT DATA INBANK
+	_Lcd_flag1	DS	1
+
+_Lcd_flag2@segment SEGMENT DATA INBANK
+	_Lcd_flag2	DS	1
+
+_Button_flag@segment SEGMENT DATA INBANK
+	_Button_flag	DS	1
+
+_databuf@segment SEGMENT DATA INBANK
+	_databuf	DS	4
+
+_sdata273@segment SEGMENT DATA INBANK
+	_sdata273	DS	1
+
+_sdata274@segment SEGMENT DATA INBANK
+	_sdata274	DS	1
+
+_Function_ISR_isr_data SEGMENT DATA INBANK
+	_ISR_isr_data@0	DS	1
+	_ISR_isr_data@1	DS	1
+
+_Function_Get_OnesPlace_Number_data SEGMENT DATA INBANK
+	_Get_OnesPlace_Number_arg@0	DS	1
+
+_Function_PwmOut_data SEGMENT DATA INBANK
+	_PwmOut_data@0	DS	1
+
+_Function_Get_TensPlace_Number_data SEGMENT DATA INBANK
+	_Get_TensPlace_Number_arg@0	DS	1
+	_Get_TensPlace_Number_data@0	DS	1
+
+_Function_DataPut_data SEGMENT DATA INBANK
+	_DataPut_arg@0	DS	1
+	_DataPut_data@0	DS	1
+
+_Function_TableToBuf_data SEGMENT DATA INBANK
+	_TableToBuf_arg@0	DS	1
+	_TableToBuf_arg@1	DS	1
+	_TableToBuf_data@0	DS	1
+	_TableToBuf_data@1	DS	1
+
+_Function_ButtonScan_data SEGMENT DATA INBANK
+	_ButtonScan_data@0	DS	1
+
+_Function_LcdScan_data SEGMENT DATA INBANK
+	_LcdScan_data@0	DS	1
+	_LcdScan_data@1	DS	1
+
+_Function_RefleshBuf_data SEGMENT DATA INBANK
+	_RefleshBuf_data@0	DS	1
+	_RefleshBuf_data@1	DS	1
+
+
+------------------begin disassembly code------------------
+
+    0: 800A       	JMP 0x000A
+    1: 0000       	NOP
+    2: 0000       	NOP
+    3: 0000       	NOP
+    4: 0000       	NOP
+    5: 0000       	NOP
+    6: 0000       	NOP
+    7: 0000       	NOP
+_interrupt@_ISR_isr:
+    8: 8228       	JMP 0x0228
+.CODE:
+    9: F9F9       	CALL 0x39F9
+_SGV_INIT_CODE_BEGIN:
+    A: 2D7F       	MOV A, #7fh
+    B: 2FDF       	B0MOV STKP, A
+    C: C01F       	CALL 0x001F
+    D: C022       	CALL 0x0022
+_SGV_INIT_CODE:
+    E: 2D01       	MOV A, #01h
+    F: 1F13       	MOV 0x13, A
+   10: 2DC0       	MOV A, #c0h
+   11: 1F14       	MOV 0x14, A
+   12: 2D01       	MOV A, #01h
+   13: 1F17       	MOV 0x17, A
+   14: 3400       	B0MOV 0x84, #00h
+   15: 339B       	B0MOV 0x83, #9Bh
+   16: 2D00       	MOV A, #00h
+   17: 2F00       	B0MOV 0x00, A
+   18: 2D18       	MOV A, #18h
+   19: 2F01       	B0MOV 0x01, A
+   1A: 2D04       	MOV A, #04h
+   1B: 2F02       	B0MOV 0x02, A
+   1C: C071       	CALL 0x0071
+_SGV_INIT_CODE_END:
+   1D: C01F       	CALL 0x001F
+   1E: 82F3       	JMP 0x02F3
+__ClearWatchDogTimer:
+   1F: 2D5A       	MOV A, #5ah
+   20: 2FCC       	B0MOV WDTR, A
+   21: 0E00       	RET
+__ClrRAM:
+   22: 2B84       	CLR 0x84
+   23: 332F       	B0MOV 0x83, #2Fh
+ClrRAM10:
+   24: 2BE7       	CLR 0xE7
+   25: 2683       	DECMS 0x83
+   26: 8024       	JMP 0x0024
+   27: 2BE7       	CLR 0xE7
+   28: 0E00       	RET
+__AddPtr@RTSegment:
+   29: 7E84       	B0BTS1 0x84.6
+   2A: 803D       	JMP 0x003D
+__AddRomPtr2Ram:
+   2B: 2F02       	B0MOV 0x02, A
+   2C: 803A       	JMP 0x003A
+__Add1GenPtr2Ram:
+   2D: 7E84       	B0BTS1 Y.6
+   2E: 803D       	JMP 0x003D
+__Add1RomPtr2Ram:
+   2F: 2F02       	B0MOV 0x02, A
+   30: 7802       	B0BTS1 0x02.0
+   31: 803A       	JMP 0x003A
+   32: 2D80       	MOV A, #80h
+   33: 1C84       	XOR 0x84, A
+   34: 7784       	B0BTS0 0x84.7
+   35: 803A       	JMP 0x003A
+   36: 2D01       	MOV A, #01h
+   37: 0302       	B0ADD 0x02, A
+   38: 2D00       	MOV A, #00h
+   39: 1182       	ADC 0x82, A
+__Shift:
+   3A: 0A82       	RLC 0x82
+   3B: 0982       	RRCM 0x82
+   3C: 0802       	RRC 0x02
+__AddRamPtr2Ram:
+   3D: 1283       	ADD A, 0x83
+   3E: 2F11       	B0MOV 0x11, A
+   3F: 2E82       	B0MOV A, R
+   40: 1084       	ADC A, 0x84
+   41: 2F12       	B0MOV 0x12, A
+   42: 2E01       	B0MOV A, 0x01
+   43: 2F83       	B0MOV Z, A
+   44: 2E00       	B0MOV A, 0x00
+   45: 2F84       	B0MOV Y, A
+   46: 2E11       	B0MOV A, 0x11
+   47: 2FE7       	B0MOV @YZ, A
+   48: 1683       	INCMS 0x83
+   49: 0000       	NOP
+   4A: 2E12       	B0MOV A, 0x12
+   4B: 2FE7       	B0MOV @YZ, A
+   4C: 0E00       	RET
+__SubGenPtr2Ram:
+   4D: 7E84       	B0BTS1 Y.6
+   4E: 8061       	JMP 0x0061
+__SubRomPtr2Ram:
+   4F: 2F02       	B0MOV 0x02, A
+   50: 805E       	JMP 0x005E
+__Sub1GenPtr2Ram:
+   51: 7E84       	B0BTS1 Y.6
+   52: 803D       	JMP 0x003D
+__Sub1RomPtr2Ram:
+   53: 2F02       	B0MOV 0x02, A
+   54: 7802       	B0BTS1 0x02.0
+   55: 805E       	JMP 0x005E
+   56: 2D80       	MOV A, #80h
+   57: 1C84       	XOR 0x84, A
+   58: 7784       	B0BTS0 0x84.7
+   59: 805E       	JMP 0x005E
+   5A: 2D01       	MOV A, #01h
+   5B: 2302       	SUB 0x02, A
+   5C: 2D00       	MOV A, #00h
+   5D: 2182       	SBC 0x82, A
+__Shift1:
+   5E: 0A82       	RLC 0x82
+   5F: 0982       	RRCM 0x82
+   60: 0802       	RRC 0x02
+__SubRamPtr2Ram:
+   61: 2283       	SUB A, 0x83
+   62: 2F11       	B0MOV 0x11, A
+   63: 2E82       	B0MOV A, R
+   64: 2084       	SBC A, 0x84
+   65: 2F12       	B0MOV 0x12, A
+   66: 2E01       	B0MOV A, 0x01
+   67: 2F83       	B0MOV Z, A
+   68: 2E00       	B0MOV A, 0x00
+   69: 2F84       	B0MOV Y, A
+   6A: 2E11       	B0MOV A, 0x11
+   6B: 2FE7       	B0MOV @YZ, A
+   6C: 1683       	INCMS 0x83
+   6D: 0000       	NOP
+   6E: 2E12       	B0MOV A, 0x12
+   6F: 2FE7       	B0MOV @YZ, A
+   70: 0E00       	RET
+sn8cc_lib@RTSegment:
+   71: 2E02       	B0MOV A, 0x02
+   72: 2F03       	B0MOV 0x03, A
+   73: 2D00       	MOV A, #00h
+   74: 2F02       	B0MOV 0x02, A
+LOOP:
+   75: 0D00       	MOVC
+   76: 2F04       	B0MOV 0x04, A
+   77: 2E00       	B0MOV A, 0x00
+   78: 2C84       	XCH A, 0x84
+   79: 2F00       	B0MOV 0x00, A
+   7A: 2E01       	B0MOV A, 0x01
+   7B: 2C83       	XCH A, 0x83
+   7C: 2F01       	B0MOV 0x01, A
+   7D: 2E04       	B0MOV A, 0x04
+   7E: 2FE7       	B0MOV @YZ, A
+   7F: 2603       	DECMS 0x03
+   80: 8082       	JMP 0x0082
+   81: 809A       	JMP 0x009A
+_Continue1:
+   82: 2D01       	MOV A, #01h
+   83: 1383       	ADD 0x83, A
+   84: 2D00       	MOV A, #00h
+   85: 1184       	ADC 0x84, A
+   86: 2E82       	B0MOV A, R
+   87: 2FE7       	B0MOV @YZ, A
+   88: 2603       	DECMS 0x03
+   89: 808B       	JMP 0x008B
+   8A: 809A       	JMP 0x009A
+_Continue2:
+   8B: 2D01       	MOV A, #01h
+   8C: 1383       	ADD 0x83, A
+   8D: 2D00       	MOV A, #00h
+   8E: 1184       	ADC 0x84, A
+   8F: 2E00       	B0MOV A, 0x00
+   90: 2C84       	XCH A, 0x84
+   91: 2F00       	B0MOV 0x00, A
+   92: 2E01       	B0MOV A, 0x01
+   93: 2C83       	XCH A, 0x83
+   94: 2F01       	B0MOV 0x01, A
+   95: 2D01       	MOV A, #01h
+   96: 1383       	ADD 0x83, A
+   97: 2D00       	MOV A, #00h
+   98: 1184       	ADC 0x84, A
+   99: 8075       	JMP 0x0075
+_END:
+   9A: 0E00       	RET
+_DATA_INIT_CODE:
+   9B: BBEE       	JMP 0x3BEE
+   9C: BBEE       	JMP 0x3BEE
+_table1@segment:
+   9D: BBEE       	JMP 0x3BEE
+   9E: BBEE       	JMP 0x3BEE
+   9F: 1144       	ADC 0x44, A
+   A0: 1144       	ADC 0x44, A
+   A1: EEAA       	CALL 0x2EAA
+   A2: BB55       	JMP 0x3B55
+   A3: 55EE       	BTS0 0xEE.5
+   A4: BB55       	JMP 0x3B55
+   A5: 5544       	BTS0 0x44.5
+   A6: 11FF       	ADC 0xFF, A
+   A7: 55EE       	BTS0 0xEE.5
+   A8: AABB       	JMP 0x2ABB
+   A9: FFEE       	CALL 0x3FEE
+   AA: AABB       	JMP 0x2ABB
+   AB: 1144       	ADC 0x44, A
+   AC: BB44       	JMP 0x3B44
+   AD: FFEE       	CALL 0x3FEE
+   AE: BBFF       	JMP 0x3BFF
+   AF: 55EE       	BTS0 0xEE.5
+   B0: BBFF       	JMP 0x3BFF
+   B1: 4400       	BCLR 0x00.4
+   B4: 4400       	BCLR 0x00.4
+_Function_IoInit_code:
+                  	                  	/************************************************************************
+                  	                  	中断只处理按键监测
+                  	                  	中断无法调用子程序
+                  	                  	修改io端口适配硬件设计
+                  	                  	修改table表以简化程序
+                  	                  	新按键消抖程序
+                  	                  	修改按键功能
+                  	                  	T0定时器模拟RTC时钟
+                  	                  	简化背光按键
+                  	                  	静止状态液晶刷新频率约为1750hz
+                  	                  	修正按键bug,增加档位至15档
+                  	                  	*************************************************************************/
+                  	                  	
+                  	                  	/****
+                  	                  	Button_Pin_Backlight P1.1   无内置上拉电阻
+                  	                  	Button_Pin_Gears     P1.2
+                  	                  	Button_Pin_Timing    P1.3
+                  	                  	
+                  	                  	MR                   P0.0
+                  	                  	CLK				 	 P1.0
+                  	                  	DSB                  P2.5
+                  	                  	Pin_Backlight        P2.4
+                  	                  	
+                  	                  	***/
+                  	                  	
+                  	                  	
+                  	                  	#include<sn8p2501b.h>
+                  	                  	
+                  	                  	#define uchar8 unsigned char
+                  	                  	#define uint8   unsigned char
+                  	                  	
+                  	                  	#define COM1	0x01        //P2.0
+                  	                  	#define COM2    0x02	    //P2.1
+                  	                  	#define COM3    0x04		//P2.2	
+                  	                  	#define COM4    0x08		//P2.3   
+                  	                  	
+                  	                  	#define MR						FP00        //HC164锁存   P0.0
+                  	                  	#define CLK						FP10        //HC164时钟信号 P1.0
+                  	                  	#define DSB						FP25		//HC164数据输出 P2.5
+                  	                  	#define Button_Pin_Backlight    FP11        //背光开关
+                  	                  	#define Button_Pin_Gears       	FP12        //控制档位
+                  	                  	#define Button_Pin_Timing       FP13        //控制定时
+                  	                  	#define Pin_Backlight			FP24        //背光灯
+                  	                  	
+                  	                  	#define Get_Number_Mask          0x03        //掩码，从table1表中获取数字
+                  	                  	 									
+                  	                  	/*************flag标志*****************/
+                  	                  	#define LcdSacn_forward          0x80        //Lcd正向扫描标志
+                  	                  	#define Lcd_Data_New             0x40        //Lcd新数据标志
+                  	                  	
+                  	                  	#define BUTTON_GEARS             0x20        //按键“档位” P2.4 被按下一次
+                  	                  	#define BUTTON_TIMING            0x10        //按键“定时” P2.5 被按下一次
+                  	                  	#define BUTTON_BACK_LIGHT        0x08        //按键 “背光” P1.1  被按下一次
+                  	                  	
+                  	                  	#define BUTTON_GEARS_WAIT        0x04        //按键“档位” P2.4 确认被按下，等待释放
+                  	                  	#define BUTTON_TIMING_WAIT       0x02        //按键“定时” P2.5 确认被按下，等待释放
+                  	                  	#define BUTTON_BACK_LIGHT_WAIT   0x01        //按键“背光”P1.1确认被按下，等待释放
+                  	                  	/******************************************/
+                  	                  	
+                  	                  	#define Max_Gears                15           //最大档位限制
+                  	                  	/*********************Button_flag*****************/
+                  	                  	#define ButtonSearchStatus       0x01  		//标识，标识按键处于查询状态
+                  	                  	#define ButtonAckStatus			 0x02		//标识，标识按键处于确认状态
+                  	                  	#define ButtonReleaseStatus		 0x03		//标识，标识按键处于等待释放状态
+                  	                  	
+                  	                  	/********************lcd_flag1***************/
+                  	                  	#define LcdGearsMask            0x0f         //掩码，用于从Lcd_flag1标志中获取当前档位 0-Max_Gears个档位
+                  	                  	#define LcdGearsNew				0x80         //标志，新档位标志，PWMOut函数读取此标志判断是否更新PWM输出状态
+                  	                  	
+                  	                  	/********************lcd_flag2****************/
+                  	                  	#define LcdTimingMask		    0x3f         //掩码，用于从Lcd_flag2标志中获取当前定时时间 最大值 2^6 =64分钟
+                  	                  	#define LcdTimingON             0x40         //标志，定时使能
+                  	                  	
+                  	                  	/*********************************************/
+                  	                  	#define ButtonPort                   P1			//按键端口
+                  	                  	#define ButtonMask  				 0x0e		 //掩码 从端口获取按键键值
+                  	                  	#define ButtonBackLightMask          0x02        //掩码  获取单个按键状态
+                  	                  	#define ButtonGearsMask              0x04        //掩码  获取单个按键状态
+                  	                  	#define ButtonTimingMask  			 0x08    	 //掩码  获取单个按键状态
+                  	                  	
+                  	                  	
+                  	                  	uchar8 LcdScan_row= COM1;   //当前LCD扫描com口标志,初始化从Com1开始扫描
+                  	                  	uchar8 flag = (LcdSacn_forward | Lcd_Data_New); //标志变量1，初始化液晶正向扫描,Lcd刷新缓冲区数据
+                  	                  	uchar8 Lcd_flag1 = 0x00;     //用于标识当前档位，PWM输出更新标志位
+                  	                  	uchar8 Lcd_flag2 = 0x00 ;	 //用于标识当前的定时时间，定时使能状态
+                  	                  	uchar8 Button_flag =  ButtonSearchStatus;   //用于标识按键，初始化为查询状态
+                  	                  	uchar8 databuf[4]={0xee,0xbb,0xee,0xbb};  //Lcd数据映射 初始化为“0000”
+                  	                  	
+                  	                  	uchar8 __ROM table1[][4]={0xee,0xbb,0xee,0xbb,//"0000"
+                  	                  							  0x44,0x11,0x44,0x11,//"1111"	
+                  	                  							  0xaa,0xee,0x55,0xbb,//"2222"
+                  	                  						      0xee,0x55,0x55,0xbb,//"3333"
+                  	                  							  0x44,0x55,0xff,0x11,//"4444"
+                  	                  							  0xee,0x55,0xbb,0xaa,//"5555"
+                  	                  							  0xee,0xff,0xbb,0xaa,//"6666"							
+                  	                  							  0x44,0x11,0x44,0xbb,//"7777"
+                  	                  						 	  0xee,0xff,0xff,0xbb,//"8888"
+                  	                  							  0xee,0x55,0xff,0xbb,//"9999"
+                  	                  							  0x00,0x44,0x11,0x00,//"----"
+                  	                  							  0x11,0x00,0x00,0x44,//"S1,S2,S3,S4"
+                  	                  									  }; 
+                  	                  	
+                  	                  	void IoInit(void);       //io初始化函数
+                  	                  	void IrqInit(void);      //中断初始化函数
+                  	                  	void LcdScan(void);      //Lcd扫描函数
+                  	                  	void ButtonScan(void);   //按键扫描函数
+                  	                  	void DataPut(uchar8  data);   //数据输出函数
+                  	                  	void RefleshBuf(void);	//更新数据缓冲区数据
+                  	                  	void PwmOut(void);      //PWM控制程序
+                  	                  	
+                  	                  	
+                  	                  	
+                  	                  	void IoInit()   //io初始化函数
+                  	                  	{	
+                  	                  		_bSET(&P1M,0); //配置为HC164的CLK引脚为输出模式
+   B5: 68C1       	B0BSET 0xC1.0
+L13:
+                  	                  		_bSET(&P2M,5); //配置HC164的DSB引脚为输出模式
+   B6: 6DC2       	B0BSET 0xC2.5
+L14:
+                  	                  		_bSET(&P0M,0); //配置HC164的MR引脚为输出模式
+   B7: 68B8       	B0BSET 0xB8.0
+L15:
+                  	                  		_bCLR(&P0,0);  //配置HC164的MR引脚输出0，即锁存HC164
+   B8: 60D0       	B0BCLR 0xD0.0
+L16:
+                  	                  	
+                  	                  		TC0M = 0x61;     //TC0分频选择Fcpu/4，使能PWM输出，选择输出阶数256 ,禁止TC0时钟
+   B9: 2D61       	MOV A, #61h
+   BA: 2FDA       	B0MOV TC0M, A
+L17:
+                  	                  	 //	FALOAD0 = 0;	//
+                  	                  	//	FTC0OUT = 0;    //选择输出阶数256 
+                  	                  		 
+                  	                  		TC0C = 00;	//
+   BB: 2BDB       	CLR 0xDB
+L18:
+                  	                  	  	TC0R = 00;	//重装值为00  占空比为00/256
+   BC: 2BCD       	CLR 0xCD
+L19:
+                  	                  	
+                  	                  		_bCLR(&P1M,1); //配置按键“背光”P1.1引脚为输入模式
+   BD: 61C1       	B0BCLR 0xC1.1
+L20:
+                  	                  		_bCLR(&P1M,2); //配置按键“档位”P1.2引脚为输入模式
+   BE: 62C1       	B0BCLR 0xC1.2
+L21:
+                  	                  		_bCLR(&P1M,3); //配置按键“定时”P1.3引脚为输入模式
+   BF: 63C1       	B0BCLR 0xC1.3
+L22:
+                  	                  	    P1 |= 0x0e;    //p1.1 p1.2 p1.3 数据寄存器写1
+   C0: 2D0E       	MOV A, #0eh
+   C1: 19D1       	OR 0xD1, A
+L23:
+                  	                  	
+                  	                  		P1UR  = 0x0c;   //配置按键“档位” P1.2引脚，按键“定时” P1.3引脚为上拉
+   C2: 2D0C       	MOV A, #0ch
+   C3: 2FE1       	B0MOV P1UR, A
+L24:
+                  	                  		_bSET(&P2M,4);  //配置背光灯引脚为输出模式
+   C4: 6CC2       	B0BSET P2M.4
+L25:
+                  	                  		Pin_Backlight = 1; //背光灯关闭
+   C5: 6CD2       	B0BSET P2.4
+L26:
+                  	                  	
+                  	                  		P2M &=0xf0;    //配置P2.0~P2.3为输入模式，用于控制LCD的COM端口
+   C6: 2DF0       	MOV A, #f0h
+   C7: 29C2       	AND 0xC2, A
+L27:
+                  	                  	}
+   C8: 0E00       	RET
+_Function_IrqInit_code:
+                  	                  	
+                  	                  	
+                  	                  	void IrqInit()     //中断初始化函数
+                  	                  	{
+                  	                  		T0M |=0x30;	  //设置T0M模式控制寄存器，T0分频为Fcpu/32
+   C9: 2D30       	MOV A, #30h
+   CA: 19D8       	OR 0xD8, A
+L37:
+                  	                  		T0C = 0x06;   //设置T0溢出时间间隔，约2ms溢出一次
+   CB: 2D06       	MOV A, #06h
+   CC: 2FD9       	B0MOV T0C, A
+L38:
+                  	                  		 
+                  	                  		_bCLR(&INTRQ,4);    //清除中断请求寄存器
+   CD: 64C8       	B0BCLR INTRQ.4
+L39:
+                  	                  		_bSET(&INTEN,4);	//使能TO中断
+   CE: 6CC9       	B0BSET INTEN.4
+L40:
+                  	                  		_bSET(&T0M,7);      //启动T0定时器
+   CF: 6FD8       	B0BSET T0M.7
+L41:
+                  	                  		_bSET(&STKP,7);		//开总中断
+   D0: 6FDF       	B0BSET STKP.7
+L42:
+                  	                  			
+                  	                  	}
+   D1: 0E00       	RET
+_Function_Get_TensPlace_Number_code:
+                  	                  	
+                  	                  	uchar8 Get_TensPlace_Number(uchar8 x)     //获取一个数的十位，数不允许超过100
+                  	                  	{
+                  	                  		uchar8 j=0;
+   D2: 2B21       	CLR 0x21
+   D3: 80D8       	JMP 0x00D8
+L45:
+                  	                  		{
+                  	                  			j += 1;
+   D4: 1621       	INCMS 0x21
+   D5: 0000       	NOP
+L54:
+                  	                  			x -= 10;
+   D6: 2DF6       	MOV A, #f6h
+   D7: 1320       	ADD 0x20, A
+L55:
+                  	                  		while(x >= 10)
+   D8: 1E20       	MOV A, 0x20
+   D9: 240A       	SUB A, #0ah
+   DA: 7286       	B0BTS0 0x86.2
+   DB: 80D4       	JMP 0x00D4
+L58:
+                  	                  		}
+                  	                  		return j;
+   DC: 1E21       	MOV A, 0x21
+L59:
+                  	                  	}	
+   DD: 0E00       	RET
+_Function_Get_OnesPlace_Number_code:
+                  	                  	
+                  	                  	
+                  	                  	
+                  	                  	uchar8 Get_OnesPlace_Number(uchar8 x)     //获取一个数的个位，数不允许超过100
+                  	                  	{
+   DE: 80E1       	JMP 0x00E1
+L62:
+                  	                  			x -= 10;
+   DF: 2DF6       	MOV A, #f6h
+   E0: 1320       	ADD 0x20, A
+L63:
+                  	                  		while(x >= 10)	
+   E1: 1E20       	MOV A, 0x20
+   E2: 240A       	SUB A, #0ah
+   E3: 7286       	B0BTS0 0x86.2
+   E4: 80DF       	JMP 0x00DF
+L69:
+                  	                  		return x;
+   E5: 1E20       	MOV A, 0x20
+L70:
+                  	                  	}
+   E6: 0E00       	RET
+_Function_ButtonScan_code:
+                  	                  	
+                  	                  	void ButtonScan(void)
+                  	                  	{
+                  	                  		uchar8 i;
+                  	                  		if(flag & BUTTON_GEARS)   //“档位”按键被按下
+   E7: 1E14       	MOV A, 0x14
+   E8: 2A20       	AND A, #20h
+   E9: 2AFF       	AND A, #FFh
+   EA: 7086       	B0BTS0 0x86.0
+   EB: 8100       	JMP 0x0100
+L88:
+                  	                  		{	 
+                  	                  			i=(Lcd_flag1 & LcdGearsMask);  //获取当前档位
+   EC: 1E15       	MOV A, 0x15
+   ED: 2A0F       	AND A, #0Fh
+   EE: 1F22       	MOV 0x22, A
+L91:
+                  	                  			Lcd_flag1 &= ~(uchar8)LcdGearsMask; //清除旧档位
+   EF: 2DF0       	MOV A, #f0h
+   F0: 2915       	AND 0x15, A
+L92:
+                  	                  			i += 1;
+   F1: 1622       	INCMS 0x22
+   F2: 0000       	NOP
+L93:
+                  	                  			if(i > Max_Gears)   //超出最大档位限制
+   F3: 1E22       	MOV A, 0x22
+   F4: 060F       	CMPRS A, #0Fh
+   F5: 7A86       	B0BTS1 0x86.2
+   F6: 80F8       	JMP 0x00F8
+L94:
+                  	                  			i = 0;
+   F7: 2B22       	CLR 0x22
+L75:
+                  	                  			Lcd_flag1 |= i;  //写入新档位
+   F8: 1E22       	MOV A, 0x22
+   F9: 1915       	OR 0x15, A
+L96:
+                  	                  	
+                  	                  			flag &= ~(uchar8)(BUTTON_GEARS); //清除按键待处理标志
+   FA: 2DDF       	MOV A, #dfh
+   FB: 2914       	AND 0x14, A
+L97:
+                  	                  			flag |= Lcd_Data_New;      //新数据待刷新标志
+   FC: 2D40       	MOV A, #40h
+   FD: 1914       	OR 0x14, A
+L98:
+                  	                  			Lcd_flag1 |= LcdGearsNew;  //通知PwmOut函数更新PWM输出
+   FE: 2D80       	MOV A, #80h
+   FF: 1915       	OR 0x15, A
+L99:
+                  	                  		}
+                  	                  	
+                  	                  	
+                  	                  		if(flag & BUTTON_TIMING)   //“定时”按键被按下
+  100: 1E14       	MOV A, 0x14
+  101: 2A10       	AND A, #10h
+  102: 2AFF       	AND A, #FFh
+  103: 7086       	B0BTS0 0x86.0
+  104: 8126       	JMP 0x0126
+L102:
+                  	                  		{
+                  	                  			i=(Lcd_flag2 & LcdTimingMask);  //获取当前定时定时时间
+  105: 1E16       	MOV A, 0x16
+  106: 2A3F       	AND A, #3Fh
+  107: 1F22       	MOV 0x22, A
+L105:
+                  	                  			if(!(Lcd_flag2 &= LcdTimingON))   //定时器处于失能状态
+  108: 1E16       	MOV A, 0x16
+  109: 2A40       	AND A, #40h
+  10A: 1F16       	MOV 0x16, A
+  10B: 0600       	CMPRS A, #00h
+  10C: 8112       	JMP 0x0112
+L106:
+                  	                  			{
+                  	                  				Lcd_flag2 &= LcdTimingON;  //定时器使能标志	
+  10D: 2D40       	MOV A, #40h
+  10E: 2916       	AND 0x16, A
+L109:
+                  	                  				Lcd_flag2 &= ~(uchar8)LcdTimingMask; //清除旧定时时间,相当于写入新定时时间0
+  10F: 2DC0       	MOV A, #c0h
+  110: 2916       	AND 0x16, A
+L110:
+                  	                  			}
+  111: 8122       	JMP 0x0122
+L79:
+                  	                  			else if(((i+10)==70))
+  112: 2D0A       	MOV A, #0ah
+  113: 1222       	ADD A, 0x22
+  114: 0646       	CMPRS A, #46h
+  115: 8119       	JMP 0x0119
+L113:
+                  	                  			{
+                  	                  				Lcd_flag2 |= ~(uchar8)LcdTimingON;  //定时器失能标志	
+  116: 2DBF       	MOV A, #bfh
+  117: 1916       	OR 0x16, A
+L116:
+                  	                  			}
+  118: 8122       	JMP 0x0122
+L81:
+                  	                  			else
+                  	                  			{
+                  	                  			    i= Get_TensPlace_Number(i);     //获取i的十位数
+  119: 1E22       	MOV A, 0x22
+  11A: 1F20       	MOV 0x20, A
+  11B: C0D2       	CALL 0x00D2
+  11C: 1F22       	MOV 0x22, A
+L121:
+                  	                  				Lcd_flag2 &= ~(uchar8)LcdTimingMask; //清除旧定时时间
+  11D: 2DC0       	MOV A, #c0h
+  11E: 2916       	AND 0x16, A
+L122:
+                  	                  				Lcd_flag2 |= (i+10);  //写入新定时时间
+  11F: 2D0A       	MOV A, #0ah
+  120: 1222       	ADD A, 0x22
+  121: 1916       	OR 0x16, A
+L123:
+                  	                  			}				
+                  	                  			flag &= ~(uchar8)(BUTTON_TIMING);    //清除按键待处理标志
+  122: 2DEF       	MOV A, #efh
+  123: 2914       	AND 0x14, A
+L126:
+                  	                  			flag |= Lcd_Data_New;     //新数据待刷新标志	
+  124: 2D40       	MOV A, #40h
+  125: 1914       	OR 0x14, A
+L127:
+                  	                  		}
+                  	                  	
+                  	                  		if(flag & BUTTON_BACK_LIGHT)  //“背光”按键被按下
+  126: 1E14       	MOV A, 0x14
+  127: 2A08       	AND A, #08h
+  128: 2AFF       	AND A, #FFh
+  129: 7086       	B0BTS0 0x86.0
+  12A: 8134       	JMP 0x0134
+L130:
+                  	                  		{
+                  	                  			Pin_Backlight=~i;  //背光灯状态翻转
+  12B: 1E22       	MOV A, 0x22
+  12C: 1DFF       	XOR A, #FFh
+  12D: 2F0A       	B0MOV 0x0A, A
+  12E: 6CD2       	B0BSET P2.4
+  12F: 700A       	B0BTS0 0x0A.0
+  130: 8132       	JMP 0x0132
+  131: 64D2       	B0BCLR P2.4
+L481:
+                  	                  			flag &= ~(uchar8)(BUTTON_BACK_LIGHT);  //清除按键待处理标志
+  132: 2DF7       	MOV A, #f7h
+  133: 2914       	AND 0x14, A
+L134:
+                  	                  		}
+                  	                  	
+                  	                  	}
+  134: 0E00       	RET
+_Function_LcdScan_code:
+                  	                  	
+                  	                  	void LcdScan()      //lcd扫描com口函数
+                  	                  	{	
+                  	                  		uchar8 i=0,j=0;
+  135: 2B22       	CLR 0x22
+L154:
+                  	                  		uchar8 i=0,j=0;
+  136: 2B23       	CLR 0x23
+L155:
+                  	                  		if(flag&LcdSacn_forward)   //com口处于正向扫描状态 
+  137: 1E14       	MOV A, 0x14
+  138: 2A80       	AND A, #80h
+  139: 2AFF       	AND A, #FFh
+  13A: 7086       	B0BTS0 0x86.0
+  13B: 8164       	JMP 0x0164
+L156:
+                  	                  		{ 
+                  	                  			if(LcdScan_row&COM4)     //com口扫描到达com4
+  13C: 1E13       	MOV A, 0x13
+  13D: 2A08       	AND A, #08h
+  13E: 2AFF       	AND A, #FFh
+  13F: 7086       	B0BTS0 0x86.0
+  140: 8146       	JMP 0x0146
+L159:
+                  	                  			{
+                  	                  				flag &= ~LcdSacn_forward;	//清正向扫描标志
+  141: 2D7F       	MOV A, #7fh
+  142: 2914       	AND 0x14, A
+L162:
+                  	                  				LcdScan_row = COM1; //设置com1
+  143: 2D01       	MOV A, #01h
+  144: 1F13       	MOV 0x13, A
+L163:
+                  	                  			}
+  145: 8148       	JMP 0x0148
+L141:
+                  	                  			else
+                  	                  				LcdScan_row <<= 1;   //com口左移一位
+  146: 6286       	B0BCLR 0x86.2
+  147: 0B13       	RLCM 0x13
+L142:
+                  	                  			j=LcdScan_row;
+  148: 1E13       	MOV A, 0x13
+  149: 1F23       	MOV 0x23, A
+  14A: 814D       	JMP 0x014D
+L143:
+                  	                  			i+=1;
+  14B: 1622       	INCMS 0x22
+  14C: 0000       	NOP
+L144:
+                  	                  			while((j >>= 1)==0x01)   //获取行号
+  14D: 6286       	B0BCLR 0x86.2
+  14E: 0823       	RRC 0x23
+  14F: 1F23       	MOV 0x23, A
+  150: 2401       	SUB A, #01h
+  151: 7086       	B0BTS0 0x86.0
+  152: 814B       	JMP 0x014B
+L169:
+                  	                  			DataPut(~databuf[i]);    //推送数据
+  153: 1E22       	MOV A, 0x22
+  154: 3400       	B0MOV 0x84, #00h
+  155: 3318       	B0MOV 0x83, #18h
+  156: 0383       	B0ADD Z, A
+  157: 2EE7       	B0MOV A, @YZ
+  158: 1DFF       	XOR A, #FFh
+  159: 1F20       	MOV 0x20, A
+  15A: C18E       	CALL 0x018E
+L170:
+                  	                  		
+                  	                  			P2M = P2M & 0xF0 | LcdScan_row;   //设置COMn为输出模式
+  15B: 2EC2       	B0MOV A, P2M
+  15C: 2AF0       	AND A, #F0h
+  15D: 1813       	OR A, 0x13
+  15E: 2FC2       	B0MOV P2M, A
+L171:
+                  	                  			P2  = P2 & 0xF0 | LcdScan_row;    //设置COMn输出为1
+  15F: 2ED2       	B0MOV A, P2
+  160: 2AF0       	AND A, #F0h
+  161: 1813       	OR A, 0x13
+  162: 2FD2       	B0MOV P2, A
+L172:
+                  	                  		}
+  163: 818D       	JMP 0x018D
+L139:
+                  	                  		else         //com口处于反向扫描状态
+                  	                  		{
+                  	                  			if(LcdScan_row&COM4)       //com口扫描到达com4
+  164: 1E13       	MOV A, 0x13
+  165: 2A08       	AND A, #08h
+  166: 2AFF       	AND A, #FFh
+  167: 7086       	B0BTS0 0x86.0
+  168: 816E       	JMP 0x016E
+L177:
+                  	                  			{
+                  	                  				flag |= LcdSacn_forward;	//设置正向扫描标志
+  169: 2D80       	MOV A, #80h
+  16A: 1914       	OR 0x14, A
+L180:
+                  	                  				LcdScan_row = COM1;    //设置com1
+  16B: 2D01       	MOV A, #01h
+  16C: 1F13       	MOV 0x13, A
+L181:
+                  	                  			}
+  16D: 8170       	JMP 0x0170
+L146:
+                  	                  			else
+                  	                  				LcdScan_row <<= 1;   //com口左移一位
+  16E: 6286       	B0BCLR 0x86.2
+  16F: 0B13       	RLCM 0x13
+L147:
+                  	                  	
+                  	                  			j=LcdScan_row;
+  170: 1E13       	MOV A, 0x13
+  171: 1F23       	MOV 0x23, A
+  172: 8175       	JMP 0x0175
+L148:
+                  	                  			i+=1;
+  173: 1622       	INCMS 0x22
+  174: 0000       	NOP
+L149:
+                  	                  			while((j >>= 1)==0x01)      //获取行号
+  175: 6286       	B0BCLR 0x86.2
+  176: 0823       	RRC 0x23
+  177: 1F23       	MOV 0x23, A
+  178: 2401       	SUB A, #01h
+  179: 7086       	B0BTS0 0x86.0
+  17A: 8173       	JMP 0x0173
+L187:
+                  	                  			DataPut(databuf[i]);     //推送数据
+  17B: 1E22       	MOV A, 0x22
+  17C: 3400       	B0MOV 0x84, #00h
+  17D: 3318       	B0MOV 0x83, #18h
+  17E: 0383       	B0ADD Z, A
+  17F: 2EE7       	B0MOV A, @YZ
+  180: 1F20       	MOV 0x20, A
+  181: C18E       	CALL 0x018E
+L188:
+                  	                  		
+                  	                  			P2M = P2M & 0xF0 | LcdScan_row;   //设置COMn为输出模式
+  182: 2EC2       	B0MOV A, P2M
+  183: 2AF0       	AND A, #F0h
+  184: 1813       	OR A, 0x13
+  185: 2FC2       	B0MOV P2M, A
+L189:
+                  	                  			P2  = P2 & 0xF0 & ~LcdScan_row;    //设置COMn输出为0
+  186: 2ED2       	B0MOV A, P2
+  187: 2AF0       	AND A, #F0h
+  188: 2F0A       	B0MOV 0x0A, A
+  189: 1E13       	MOV A, 0x13
+  18A: 1DFF       	XOR A, #FFh
+  18B: 280A       	AND A, 0x0A
+  18C: 2FD2       	B0MOV P2, A
+L190:
+                  	                  		}
+                  	                  	}
+  18D: 0E00       	RET
+_Function_DataPut_code:
+                  	                  	
+                  	                  	void DataPut(uchar8  data)   //推送数据至74hc164
+                  	                  	{	
+                  	                  		uchar8 i;
+                  	                  		MR=0;   //锁存
+  18E: 60D0       	B0BCLR P0.0
+L202:
+                  	                  		for(i=0;i<8;i++)
+  18F: 2B21       	CLR 0x21
+  190: 819E       	JMP 0x019E
+L195:
+                  	                  		{
+                  	                  			CLK=0;
+  191: 60D1       	B0BCLR 0xD1.0
+L207:
+                  	                  	//		NOP(10);   //空指令，用于稳定数据，降低扫描速度
+                  	                  			DSB=(data & 0x01);
+  192: 1E20       	MOV A, 0x20
+  193: 2A01       	AND A, #01h
+  194: 2F0A       	B0MOV 0x0A, A
+  195: 6DD2       	B0BSET P2.5
+  196: 700A       	B0BTS0 0x0A.0
+  197: 8199       	JMP 0x0199
+  198: 65D2       	B0BCLR P2.5
+L482:
+                  	                  	//		NOP(10);   //空指令，用于稳定数据，降低扫描速度
+                  	                  			CLK=1;
+  199: 68D1       	B0BSET P1.0
+L209:
+                  	                  			data >>= 1;
+  19A: 6286       	B0BCLR PFLAG.2
+  19B: 0920       	RRCM 0x20
+L210:
+                  	                  		for(i=0;i<8;i++)
+  19C: 1621       	INCMS 0x21
+  19D: 0000       	NOP
+L198:
+                  	                  		for(i=0;i<8;i++)
+  19E: 1E21       	MOV A, 0x21
+  19F: 2408       	SUB A, #08h
+  1A0: 7A86       	B0BTS1 0x86.2
+  1A1: 8191       	JMP 0x0191
+L214:
+                  	                  		}
+                  	                  		MR=1;	//开锁存
+  1A2: 68D0       	B0BSET 0xD0.0
+L217:
+                  	                  	}
+  1A3: 0E00       	RET
+_Function_TableToBuf_code:
+                  	                  	
+                  	                  	void TableToBuf(uchar8 mask,uchar8 number)  //根据掩码从Table表中取数据放至databuf
+                  	                  	{
+                  	                  		uchar8 i,dat;
+                  	                  		for(i=0;i<4;i++)
+  1A4: 2B22       	CLR 0x22
+  1A5: 81EC       	JMP 0x01EC
+L220:
+                  	                  		{	
+                  	                  			dat = table1[number][i] & mask;    //获得对应的数码管显示位
+  1A6: 1E22       	MOV A, 0x22
+  1A7: 2F0A       	B0MOV 0x0A, A
+  1A8: 2B0B       	CLR 0x0B
+  1A9: 1E21       	MOV A, 0x21
+  1AA: 2F0C       	B0MOV 0x0C, A
+  1AB: 2B0D       	CLR 0x0D
+  1AC: 6286       	B0BCLR 0x86.2
+  1AD: 0B0C       	RLCM 0x0C
+  1AE: 0B0D       	RLCM 0x0D
+  1AF: 6286       	B0BCLR 0x86.2
+  1B0: 0B0C       	RLCM 0x0C
+  1B1: 0B0D       	RLCM 0x0D
+  1B2: 2D00       	MOV A, #00h
+  1B3: 2F00       	B0MOV 0x00, A
+  1B4: 2D0C       	MOV A, #0ch
+  1B5: 2F01       	B0MOV 0x01, A
+  1B6: 2D00       	MOV A, #00h
+  1B7: 2F82       	B0MOV R, A
+  1B8: 2D9D       	MOV A, #9dh
+  1B9: 2F83       	B0MOV Z, A
+  1BA: 2E82       	B0MOV A, R
+  1BB: 2F84       	B0MOV Y, A
+  1BC: 2E0D       	B0MOV A, 0x0D
+  1BD: 2F82       	B0MOV R, A
+  1BE: 2E0C       	B0MOV A, 0x0C
+  1BF: C02B       	CALL 0x002B
+  1C0: 2D00       	MOV A, #00h
+  1C1: 2F00       	B0MOV 0x00, A
+  1C2: 2D0A       	MOV A, #0ah
+  1C3: 2F01       	B0MOV 0x01, A
+  1C4: 2E0D       	B0MOV A, 0x0D
+  1C5: 2F82       	B0MOV R, A
+  1C6: 2E0C       	B0MOV A, 0x0C
+  1C7: 2F83       	B0MOV Z, A
+  1C8: 2E82       	B0MOV A, R
+  1C9: 2F84       	B0MOV Y, A
+  1CA: 2E0B       	B0MOV A, 0x0B
+  1CB: 2F82       	B0MOV R, A
+  1CC: 2E0A       	B0MOV A, 0x0A
+  1CD: C02F       	CALL 0x002F
+  1CE: 2E0B       	B0MOV A, 0x0B
+  1CF: 2F84       	B0MOV Y, A
+  1D0: 2E0A       	B0MOV A, 0x0A
+  1D1: 2F83       	B0MOV Z, A
+  1D2: C2FD       	CALL 0x02FD
+  1D3: 2820       	AND A, 0x20
+  1D4: 1F23       	MOV 0x23, A
+L231:
+                  	                  			databuf[i] &= ~(uchar8)mask;     
+  1D5: 1E22       	MOV A, 0x22
+  1D6: 2B0B       	CLR 0x0B
+  1D7: 1418       	ADD A, #18h
+  1D8: 2F83       	B0MOV Z, A
+  1D9: 2D00       	MOV A, #00h
+  1DA: 100B       	ADC A, 0x0B
+  1DB: 2F84       	B0MOV Y, A
+  1DC: 1E20       	MOV A, 0x20
+  1DD: 1DFF       	XOR A, #FFh
+  1DE: 2F01       	B0MOV 0x01, A
+  1DF: 29E7       	AND 0xE7, A
+L232:
+                  	                  			databuf[i] |= dat;							
+  1E0: 1E22       	MOV A, 0x22
+  1E1: 2B0B       	CLR 0x0B
+  1E2: 1418       	ADD A, #18h
+  1E3: 2F83       	B0MOV Z, A
+  1E4: 2D00       	MOV A, #00h
+  1E5: 100B       	ADC A, 0x0B
+  1E6: 2F84       	B0MOV Y, A
+  1E7: 1E23       	MOV A, 0x23
+  1E8: 2F01       	B0MOV 0x01, A
+  1E9: 19E7       	OR 0xE7, A
+L233:
+                  	                  		for(i=0;i<4;i++)
+  1EA: 1622       	INCMS 0x22
+  1EB: 0000       	NOP
+L223:
+                  	                  		for(i=0;i<4;i++)
+  1EC: 1E22       	MOV A, 0x22
+  1ED: 2404       	SUB A, #04h
+  1EE: 7A86       	B0BTS1 0x86.2
+  1EF: 81A6       	JMP 0x01A6
+L237:
+                  	                  		}
+                  	                  	}
+  1F0: 0E00       	RET
+_Function_RefleshBuf_code:
+                  	                  	
+                  	                  	void RefleshBuf(void)   //数据缓冲区刷新函数
+                  	                  	{
+                  	                  		uchar8 temporary1,temporary2;
+                  	                  		if(flag & Lcd_Data_New)   //有新数据要刷新
+  1F1: 1E14       	MOV A, 0x14
+  1F2: 2A40       	AND A, #40h
+  1F3: 2AFF       	AND A, #FFh
+  1F4: 7086       	B0BTS0 0x86.0
+  1F5: 8227       	JMP 0x0227
+L249:
+                  	                  		{	
+                  	                  	/********************************刷新档位***********************************************/
+                  	                  			temporary1=(Lcd_flag1 & LcdGearsMask);  //获取档位
+  1F6: 1E15       	MOV A, 0x15
+  1F7: 2A0F       	AND A, #0Fh
+  1F8: 1F24       	MOV 0x24, A
+L252:
+                  	                  			temporary2=Get_TensPlace_Number(temporary1);  //获取十位
+  1F9: 1F20       	MOV 0x20, A
+  1FA: C0D2       	CALL 0x00D2
+  1FB: 1F25       	MOV 0x25, A
+L253:
+                  	                  			TableToBuf(0xc0,temporary2);        //从Table表中区数据放至databuf
+  1FC: 1F21       	MOV 0x21, A
+  1FD: 2DC0       	MOV A, #c0h
+  1FE: 1F20       	MOV 0x20, A
+  1FF: C1A4       	CALL 0x01A4
+L254:
+                  	                  	
+                  	                  			temporary2=Get_OnesPlace_Number(temporary1);  //获取个位
+  200: 1E24       	MOV A, 0x24
+  201: 1F20       	MOV 0x20, A
+  202: C0DE       	CALL 0x00DE
+  203: 1F25       	MOV 0x25, A
+L255:
+                  	                  			TableToBuf(0x30,temporary2);        //从Table表中区数据放至databuf
+  204: 1F21       	MOV 0x21, A
+  205: 2D30       	MOV A, #30h
+  206: 1F20       	MOV 0x20, A
+  207: C1A4       	CALL 0x01A4
+L256:
+                  	                  	
+                  	                  	
+                  	                  	/*******************************刷新定时时间******************************************/
+                  	                  			if(Lcd_flag2 & LcdTimingON)  //定时器使能标志
+  208: 1E16       	MOV A, 0x16
+  209: 2A40       	AND A, #40h
+  20A: 2AFF       	AND A, #FFh
+  20B: 7086       	B0BTS0 0x86.0
+  20C: 8220       	JMP 0x0220
+L257:
+                  	                  			{
+                  	                  				temporary1=(Lcd_flag2 & LcdTimingMask);  //获取当前定时定时时间
+  20D: 1E16       	MOV A, 0x16
+  20E: 2A3F       	AND A, #3Fh
+  20F: 1F24       	MOV 0x24, A
+L260:
+                  	                  				temporary2=Get_TensPlace_Number(temporary1);  //获取十位
+  210: 1F20       	MOV 0x20, A
+  211: C0D2       	CALL 0x00D2
+  212: 1F25       	MOV 0x25, A
+L261:
+                  	                  				TableToBuf(0x0c,temporary2);    //从Table表中取数据放至databuf
+  213: 1F21       	MOV 0x21, A
+  214: 2D0C       	MOV A, #0ch
+  215: 1F20       	MOV 0x20, A
+  216: C1A4       	CALL 0x01A4
+L262:
+                  	                  	
+                  	                  				temporary2=Get_OnesPlace_Number(temporary1);  //获取十位
+  217: 1E24       	MOV A, 0x24
+  218: 1F20       	MOV 0x20, A
+  219: C0DE       	CALL 0x00DE
+  21A: 1F25       	MOV 0x25, A
+L263:
+                  	                  				TableToBuf(0x03,temporary2);    //从Table表中取数据放至databuf		
+  21B: 1F21       	MOV 0x21, A
+  21C: 2D03       	MOV A, #03h
+  21D: 1F20       	MOV 0x20, A
+  21E: C1A4       	CALL 0x01A4
+L264:
+                  	                  			}else    //显示“--”
+  21F: 8225       	JMP 0x0225
+L244:
+                  	                  				TableToBuf(0x0f,11);         //从Table表中取数据放至databuf
+  220: 2D0B       	MOV A, #0bh
+  221: 1F21       	MOV 0x21, A
+  222: 2D0F       	MOV A, #0fh
+  223: 1F20       	MOV 0x20, A
+  224: C1A4       	CALL 0x01A4
+L245:
+                  	                  				
+                  	                  	
+                  	                  	/**************************************************************************************/
+                  	                  	
+                  	                  			flag &= ~(uchar8)Lcd_Data_New; //数据处理完毕
+  225: 2DBF       	MOV A, #bfh
+  226: 2914       	AND 0x14, A
+L268:
+                  	                  		}
+                  	                  	}
+  227: 0E00       	RET
+_Function_ISR_isr_code:
+  228: 0400       	PUSH
+  229: 2E84       	B0MOV A, Y
+  22A: 2F07       	B0MOV 0x07, A
+  22B: 2E83       	B0MOV A, Z
+  22C: 2F08       	B0MOV 0x08, A
+  22D: 2E82       	B0MOV A, R
+  22E: 2F09       	B0MOV 0x09, A
+  22F: 2E04       	B0MOV A, 0x04
+  230: 2F05       	B0MOV 0x05, A
+  231: 2E03       	B0MOV A, 0x03
+  232: 2F06       	B0MOV 0x06, A
+L305:
+                  	                  	
+                  	                  	
+                  	                  	void __interrupt[0x08] ISR(void)   //中断处理函数
+                  	                  	{
+                  	                  		
+                  	                  	  	uchar8 ButtonValue ; 
+                  	                  		static uchar8 ms_counter=0; //毫秒计数
+                  	                  		static uchar8 s_counter=0;  //秒计数
+                  	                  	
+                  	                  	/******************************定时处理****************/
+                  	                  		if(Lcd_flag2 & LcdTimingMask)   //剩余定时时间不为零
+  233: 1E16       	MOV A, 0x16
+  234: 2A3F       	AND A, #3Fh
+  235: 2AFF       	AND A, #FFh
+  236: 7086       	B0BTS0 0x86.0
+  237: 824F       	JMP 0x024F
+L308:
+                  	                  		{
+                  	                  			if(ms_counter>=250)   //250*2ms=0.5s
+  238: 1E1C       	MOV A, 0x1C
+  239: 24FA       	SUB A, #fah
+  23A: 7A86       	B0BTS1 0x86.2
+  23B: 8240       	JMP 0x0240
+L311:
+                  	                  			{
+                  	                  				ms_counter = 0;
+  23C: 2B1C       	CLR 0x1C
+L314:
+                  	                  				s_counter++;
+  23D: 161D       	INCMS 0x1D
+  23E: 0000       	NOP
+L315:
+                  	                  			}else
+  23F: 8242       	JMP 0x0242
+L277:
+                  	                  			{
+                  	                  				ms_counter++;
+  240: 161C       	INCMS 0x1C
+  241: 0000       	NOP
+L320:
+                  	                  			}
+                  	                  	
+                  	                  			if(s_counter>=120)    //120*0.5=60s
+  242: 1E1D       	MOV A, 0x1D
+  243: 2478       	SUB A, #78h
+  244: 7A86       	B0BTS1 0x86.2
+  245: 824C       	JMP 0x024C
+L323:
+                  	                  			{
+                  	                  				s_counter = 0;
+  246: 2B1D       	CLR 0x1D
+L326:
+                  	                  				Lcd_flag2 -= 1;        //定时时间减去一分钟
+  247: 2616       	DECMS 0x16
+  248: 0000       	NOP
+L327:
+                  	                  				flag |= Lcd_Data_New;  //新数据待刷新标志
+  249: 2D40       	MOV A, #40h
+  24A: 1914       	OR 0x14, A
+L328:
+                  	                  			}else
+  24B: 8253       	JMP 0x0253
+L279:
+                  	                  			{
+                  	                  				s_counter++;
+  24C: 161D       	INCMS 0x1D
+  24D: 0000       	NOP
+L333:
+                  	                  			}
+                  	                  		}
+  24E: 8253       	JMP 0x0253
+L275:
+                  	                  		else
+                  	                  		{
+                  	                  			ms_counter = 0;	
+  24F: 2B1C       	CLR 0x1C
+L340:
+                  	                  			s_counter  = 0;
+  250: 2B1D       	CLR 0x1D
+L341:
+                  	                  			Lcd_flag1 |= LcdGearsNew;  //通知PwmOut函数更新PWM输出
+  251: 2D80       	MOV A, #80h
+  252: 1915       	OR 0x15, A
+L342:
+                  	                  		}
+                  	                  	/***********************检测按键********************************/
+                  	                  	
+                  	                  	   ButtonValue = (~ButtonPort) & ButtonMask;   // 检测哪一个按键按下
+  253: 2ED1       	B0MOV A, P1
+  254: 1DFF       	XOR A, #FFh
+  255: 2A0E       	AND A, #0Eh
+  256: 1F1E       	MOV 0x1E, A
+L345:
+                  	                  	   switch (Button_flag & 0x03)
+  257: 1E17       	MOV A, 0x17
+  258: 2A03       	AND A, #03h
+  259: 1F1F       	MOV 0x1F, A
+  25A: 2401       	SUB A, #01h
+  25B: 7086       	B0BTS0 0x86.0
+  25C: 8266       	JMP 0x0266
+  25D: 1E1F       	MOV A, 0x1F
+  25E: 2402       	SUB A, #02h
+  25F: 7086       	B0BTS0 0x86.0
+  260: 826C       	JMP 0x026C
+  261: 1E1F       	MOV A, 0x1F
+  262: 2403       	SUB A, #03h
+  263: 7086       	B0BTS0 0x86.0
+  264: 828A       	JMP 0x028A
+  265: 82AA       	JMP 0x02AA
+L346:
+                  	                  	   {
+                  	                  	     case ButtonSearchStatus:            // 按键查询状态
+                  	                  	    {
+                  	                  	       if (ButtonValue)
+  266: 1E1E       	MOV A, 0x1E
+  267: 7086       	B0BTS0 0x86.0
+  268: 82AA       	JMP 0x02AA
+L351:
+                  	                  	         Button_flag = ButtonAckStatus;    // 按键下一个状态为确认状态
+  269: 2D02       	MOV A, #02h
+  26A: 1F17       	MOV 0x17, A
+L352:
+                  	                  	     } break;
+  26B: 82AA       	JMP 0x02AA
+L287:
+                  	                  	     
+                  	                  	     case ButtonAckStatus:               // 按键确认状态
+                  	                  	    {
+                  	                  	       if (!ButtonValue)    
+  26C: 1E1E       	MOV A, 0x1E
+  26D: 0600       	CMPRS A, #00h
+  26E: 8272       	JMP 0x0272
+L358:
+                  	                  	         Button_flag = ButtonSearchStatus;
+  26F: 2D01       	MOV A, #01h
+  270: 1F17       	MOV 0x17, A
+  271: 82AA       	JMP 0x02AA
+L288:
+                  	                  	       else
+                  	                  	       {
+                  	                  			if(ButtonValue & ButtonGearsMask)      //按键“档位”被按下
+  272: 1E1E       	MOV A, 0x1E
+  273: 2A04       	AND A, #04h
+  274: 2AFF       	AND A, #FFh
+  275: 7086       	B0BTS0 0x86.0
+  276: 8279       	JMP 0x0279
+L362:
+                  	                  				flag |= BUTTON_GEARS_WAIT;          //按键“档位” 置等待确认标志
+  277: 2D04       	MOV A, #04h
+  278: 1914       	OR 0x14, A
+L290:
+                  	                  	
+                  	                  			if(ButtonValue & ButtonTimingMask)      //按键“定时”被按下
+  279: 1E1E       	MOV A, 0x1E
+  27A: 2A08       	AND A, #08h
+  27B: 2AFF       	AND A, #FFh
+  27C: 7086       	B0BTS0 0x86.0
+  27D: 8280       	JMP 0x0280
+L364:
+                  	                  				flag |= BUTTON_TIMING_WAIT;          //按键“定时” 置等待确认标志
+  27E: 2D02       	MOV A, #02h
+  27F: 1914       	OR 0x14, A
+L292:
+                  	                  	
+                  	                  			if(ButtonValue & ButtonBackLightMask)    //按键“背光”被按下
+  280: 1E1E       	MOV A, 0x1E
+  281: 2A02       	AND A, #02h
+  282: 2AFF       	AND A, #FFh
+  283: 7086       	B0BTS0 0x86.0
+  284: 8287       	JMP 0x0287
+L366:
+                  	                  				flag |= BUTTON_BACK_LIGHT_WAIT;      //按键“背光” 置等待确认标志
+  285: 2D01       	MOV A, #01h
+  286: 1914       	OR 0x14, A
+L294:
+                  	                  	
+                  	                  	         Button_flag = ButtonReleaseStatus;  // 按键下一个状态为释放状态
+  287: 2D03       	MOV A, #03h
+  288: 1F17       	MOV 0x17, A
+L368:
+                  	                  	       }
+                  	                  	     } break;        
+  289: 82AA       	JMP 0x02AA
+L296:
+                  	                  	                     
+                  	                  	     case ButtonReleaseStatus:             // 按键释放状态
+                  	                  	    {
+                  	                  	       if (!ButtonValue)                   // 按键释放
+  28A: 1E1E       	MOV A, 0x1E
+  28B: 0600       	CMPRS A, #00h
+  28C: 82AA       	JMP 0x02AA
+L376:
+                  	                  	      {
+                  	                  	         if(flag & BUTTON_GEARS_WAIT)      //按键“档位”正等待确认
+  28D: 1E14       	MOV A, 0x14
+  28E: 2A04       	AND A, #04h
+  28F: 2AFF       	AND A, #FFh
+  290: 7086       	B0BTS0 0x86.0
+  291: 8296       	JMP 0x0296
+L379:
+                  	                  			{
+                  	                  				flag |= BUTTON_GEARS;          //按键“档位” 置确认标志
+  292: 2D20       	MOV A, #20h
+  293: 1914       	OR 0x14, A
+L382:
+                  	                  				flag &= ~(uchar8)BUTTON_GEARS_WAIT;  //清等待确认标志
+  294: 2DFB       	MOV A, #fbh
+  295: 2914       	AND 0x14, A
+L383:
+                  	                  			 }
+                  	                  			 if(flag & BUTTON_TIMING_WAIT)      //按键“定时”等待确认
+  296: 1E14       	MOV A, 0x14
+  297: 2A02       	AND A, #02h
+  298: 2AFF       	AND A, #FFh
+  299: 7086       	B0BTS0 0x86.0
+  29A: 829F       	JMP 0x029F
+L386:
+                  	                  			{
+                  	                  				flag |= BUTTON_TIMING;          //按键“定时” 置确认标志
+  29B: 2D10       	MOV A, #10h
+  29C: 1914       	OR 0x14, A
+L389:
+                  	                  				flag &= ~(uchar8)BUTTON_TIMING_WAIT;  //清等待确认标志
+  29D: 2DFD       	MOV A, #fdh
+  29E: 2914       	AND 0x14, A
+L390:
+                  	                  			 }
+                  	                  			 if(flag & BUTTON_BACK_LIGHT_WAIT)      //按键“背光”等待确认
+  29F: 1E14       	MOV A, 0x14
+  2A0: 2A01       	AND A, #01h
+  2A1: 2AFF       	AND A, #FFh
+  2A2: 7086       	B0BTS0 0x86.0
+  2A3: 82A8       	JMP 0x02A8
+L393:
+                  	                  		 	{
+                  	                  				flag |= BUTTON_BACK_LIGHT;          //按键“背光” 置确认标志
+  2A4: 2D08       	MOV A, #08h
+  2A5: 1914       	OR 0x14, A
+L396:
+                  	                  				flag &= ~(uchar8)BUTTON_BACK_LIGHT_WAIT;  //清等待确认标志
+  2A6: 2DFE       	MOV A, #feh
+  2A7: 2914       	AND 0x14, A
+L397:
+                  	                  			 }	
+                  	                  	        Button_flag = ButtonSearchStatus;  // 按键下一个状态为查询状态     
+  2A8: 2D01       	MOV A, #01h
+  2A9: 1F17       	MOV 0x17, A
+L400:
+                  	                  	      }
+                  	                  	     }  
+                  	                  	     default : break;
+                  	                  	   }
+                  	                  	   FT0IRQ = 0;     //清除中断标志位
+  2AA: 64C8       	B0BCLR 0xC8.4
+L408:
+                  	                  	   /*************************************************************/
+                  	                  	}
+  2AB: 2E05       	B0MOV A, 0x05
+  2AC: 2F04       	B0MOV 0x04, A
+  2AD: 2E06       	B0MOV A, 0x06
+  2AE: 2F03       	B0MOV 0x03, A
+  2AF: 2E07       	B0MOV A, 0x07
+  2B0: 2F84       	B0MOV Y, A
+  2B1: 2E08       	B0MOV A, 0x08
+  2B2: 2F83       	B0MOV Z, A
+  2B3: 2E09       	B0MOV A, 0x09
+  2B4: 2F82       	B0MOV R, A
+  2B5: 0500       	POP
+  2B6: 0F00       	RETI
+_Function_PwmOut_code:
+                  	                  	
+                  	                  	void PwmOut()
+                  	                  	{
+                  	                  		if(Lcd_flag1 & LcdGearsNew)  //需要更新PWM输出
+  2B7: 1E15       	MOV A, 0x15
+  2B8: 2A80       	AND A, #80h
+  2B9: 2AFF       	AND A, #FFh
+  2BA: 7086       	B0BTS0 0x86.0
+  2BB: 82F2       	JMP 0x02F2
+L429:
+                  	                  		{
+                  	                  			switch(Lcd_flag1 & LcdGearsMask)  //获取新输出档位
+  2BC: 1E15       	MOV A, 0x15
+  2BD: 2A0F       	AND A, #0Fh
+  2BE: 1F20       	MOV 0x20, A
+  2BF: 1480       	ADD A, #80h
+  2C0: 0688       	CMPRS A, #88h
+  2C1: 7286       	B0BTS0 0x86.2
+  2C2: 82CF       	JMP 0x02CF
+  2C3: 2480       	SUB A, #80h
+  2C4: 7A86       	B0BTS1 0x86.2
+  2C5: 82CF       	JMP 0x02CF
+  2C6: 03CE       	B0ADD PCL, A
+  2C7: 82D0       	JMP 0x02D0
+  2C8: 82D2       	JMP 0x02D2
+  2C9: 82D5       	JMP 0x02D5
+  2CA: 82D8       	JMP 0x02D8
+  2CB: 82DB       	JMP 0x02DB
+  2CC: 82DE       	JMP 0x02DE
+  2CD: 82E1       	JMP 0x02E1
+  2CE: 82E4       	JMP 0x02E4
+L484:
+  2CF: 82E6       	JMP 0x02E6
+L432:
+                  	                  			{
+                  	                  				case 0: FTC0ENB = 0; //禁止TC0时钟
+  2D0: 67DA       	B0BCLR TC0M.7
+L435:
+                  	                  				break;
+  2D1: 82E6       	JMP 0x02E6
+L417:
+                  	                  				case 1: TC0R = 30;	//占空比为30/256
+  2D2: 2D1E       	MOV A, #1eh
+  2D3: 2FCD       	B0MOV TC0R, A
+L437:
+                  	                  				break;
+  2D4: 82E6       	JMP 0x02E6
+L418:
+                  	                  				case 2: TC0R = 60;	//占空比为60/256
+  2D5: 2D3C       	MOV A, #3ch
+  2D6: 2FCD       	B0MOV TC0R, A
+L439:
+                  	                  				break;
+  2D7: 82E6       	JMP 0x02E6
+L419:
+                  	                  				case 3: TC0R = 90;	//占空比为90/256
+  2D8: 2D5A       	MOV A, #5ah
+  2D9: 2FCD       	B0MOV TC0R, A
+L441:
+                  	                  				break;
+  2DA: 82E6       	JMP 0x02E6
+L420:
+                  	                  				case 4: TC0R = 120;	//占空比为120/256
+  2DB: 2D78       	MOV A, #78h
+  2DC: 2FCD       	B0MOV TC0R, A
+L443:
+                  	                  				break;
+  2DD: 82E6       	JMP 0x02E6
+L421:
+                  	                  				case 5: TC0R = 150;	//占空比为150/256
+  2DE: 2D96       	MOV A, #96h
+  2DF: 2FCD       	B0MOV TC0R, A
+L445:
+                  	                  				break;
+  2E0: 82E6       	JMP 0x02E6
+L422:
+                  	                  				case 6: TC0R = 180;	//占空比为180/256
+  2E1: 2DB4       	MOV A, #b4h
+  2E2: 2FCD       	B0MOV TC0R, A
+L447:
+                  	                  				break;
+  2E3: 82E6       	JMP 0x02E6
+L423:
+                  	                  				case 7: TC0R = 210;	//占空比为210/256
+  2E4: 2DD2       	MOV A, #d2h
+  2E5: 2FCD       	B0MOV TC0R, A
+L449:
+                  	                  				break;
+                  	                  				default :break;
+                  	                  			}
+                  	                  			if((Lcd_flag2 & LcdTimingON) && (!(Lcd_flag2 & LcdTimingMask)) )  //如果定时功能使能并且定时时间到零
+  2E6: 1E16       	MOV A, 0x16
+  2E7: 2A40       	AND A, #40h
+  2E8: 2AFF       	AND A, #FFh
+  2E9: 7086       	B0BTS0 0x86.0
+  2EA: 82F0       	JMP 0x02F0
+  2EB: 1E16       	MOV A, 0x16
+  2EC: 2A3F       	AND A, #3Fh
+  2ED: 0600       	CMPRS A, #00h
+  2EE: 82F0       	JMP 0x02F0
+L454:
+                  	                  				FTC0ENB = 0; //禁止TC0时钟，关闭PWM输出
+  2EF: 67DA       	B0BCLR 0xDA.7
+L424:
+                  	                  				
+                  	                  		Lcd_flag1 &= ~(uchar8)LcdGearsNew;  //PWM输出更新完毕
+  2F0: 2D7F       	MOV A, #7fh
+  2F1: 2915       	AND 0x15, A
+L456:
+                  	                  		}
+                  	                  	}
+  2F2: 0E00       	RET
+_Function_main_code:
+                  	                  	
+                  	                  	/**************************主函数************************/
+                  	                  	int main(void)
+                  	                  	{	 
+                  	                  		IoInit();
+  2F3: C0B5       	CALL 0x00B5
+L467:
+                  	                  		IrqInit();   
+  2F4: C0C9       	CALL 0x00C9
+L461:
+                  	                  		{
+                  	                  			WDTR=0x5A;      //看门狗清零
+  2F5: 2D5A       	MOV A, #5ah
+  2F6: 2FCC       	B0MOV WDTR, A
+L471:
+                  	                  			ButtonScan();   //按键扫描
+  2F7: C0E7       	CALL 0x00E7
+L472:
+                  	                  			RefleshBuf();   //刷新显示缓冲区
+  2F8: C1F1       	CALL 0x01F1
+L473:
+                  	                  			LcdScan();      //扫描Lcd
+  2F9: C135       	CALL 0x0135
+L474:
+                  	                  			PwmOut(); 		//更新PWM输出状态
+  2FA: C2B7       	CALL 0x02B7
+L475:
+                  	                  		while(1)
+  2FB: 82F5       	JMP 0x02F5
+L478:
+                  	                  		}
+                  	                  		return 0;
+  2FC: 2D00       	MOV A, #00h
+__MovRomToReg@RTL:
+                  	                  		
+                  	                  	}
+  2FD: 2B02       	CLR 0x02
+  2FE: 0A84       	RLC 0x84
+  2FF: 6784       	B0BCLR 0x84.7
+  300: 0D00       	MOVC
+  301: 7286       	B0BTS0 0x86.2
+  302: 2E82       	B0MOV A, R
+  303: 0E00       	RET
+__Mov4ByteRomToReg:
+  304: 2B02       	CLR 0x02
+  305: 0D00       	MOVC
+  306: 2C01       	XCH A, 0x01
+  307: 2E82       	B0MOV A, R
+  308: 2C00       	XCH A, 0x00
+  309: 2D01       	MOV A, #01h
+  30A: 0383       	B0ADD Z, A
+  30B: 2D00       	MOV A, #00h
+  30C: 1184       	ADC 0x84, A
+  30D: 1102       	ADC 0x02, A
+  30E: 0D00       	MOVC
+  30F: 2C01       	XCH A, 0x01
+  310: 2F02       	B0MOV 0x02, A
+  311: 2E82       	B0MOV A, R
+  312: 2C00       	XCH A, 0x00
+  313: 2F82       	B0MOV R, A
+  314: 2E02       	B0MOV A, 0x02
+  315: 0E00       	RET
